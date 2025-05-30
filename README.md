@@ -14,8 +14,9 @@ This layer handles the business logic and acts as a bridge between the frontend 
 
 ### 3. Database Tier:
 This is the backend layer responsible for storing and retrieving data. It communicates with the application tier to perform data operations. Technologies used include SQL databases like MySQL and NoSQL databases like MongoDB or Cassandra.
-
-![Web Server (Nginx   NodeJS)](https://github.com/user-attachments/assets/db871885-809b-4ccf-a55d-fb3ee6497de2)
+![3tier](https://github.com/user-attachments/assets/f9bd2d10-98de-454b-888b-0f3a20285a46)
+![3tier](https://github.com/user-attachments/assets/d5953e16-7d88-41a2-b7ec-888964960254)
+![Test-App-Server](https://github.com/user-attachments/assets/5240ef35-f23a-4e4b-a404-6e4bdb9a84e0)
 
 In this setup, a public-facing Application Load Balancer handles incoming traffic and routes it to the web tier EC2 instances. These instances run Nginx servers that serve a React.js frontend and forward API requests to an internal load balancer in the application tier. The app tier, built with Node.js, processes the requests, interacts with an MySQL single-AZ database, and sends the data back to the web tier. Each layer is equipped with load balancers, health checks, and autoscaling groups to ensure high availability and smooth scaling.
 
